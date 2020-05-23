@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CsvHelper" Version="15.0.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Postcodes.csv" />
+      <None Remove="NSPL_FEB_2020_UK.csv" />
+      <Content Include="Data\LAU2_to_LAU1_to_NUTS3_to_NUTS2_to_NUTS1.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="Data\NSPL.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="Data\Postcodes.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="LAU2_to_LAU1_to_NUTS3_to_NUTS2_to_NUTS1_January_2018_Lookup_in_United_Kingdom_v3.csv" />
+    </ItemGroup>
+
+</Project>
